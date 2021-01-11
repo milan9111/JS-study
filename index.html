@@ -12,16 +12,24 @@
             <main>
                 <section>
                     <script type="text/javascript">
-                    var person;
-                    //alert("Hello, " + person);
+                        var arr = new Array("str", 1.23, 7, false);
+                       
+                        
+                        for(var i = 0; i < arr.length; i++) {
+                            document.write(arr[i] + "<br />");
+                        }
 
-                    if (confirm("Are you sure?")) {
-                        person = prompt("Hi, whats you name?"); 
-                        alert("Hello, " + person); 
-                    } 
-                    else
-                    alert("Person not sure");
-                    
+                        arr = new Array();
+                        for(i = 0; i < 10; i++) {
+                            arr[i] = i * 3;
+                            document.write(arr[i] + "<br />"); 
+                        }
+                        
+                        var summ = 0;
+                        for (i = 0; i < arr.length; i++) 
+                            summ += arr[i];
+                            document.write("Srednee arifmeticheskoe - " + (summ / arr.length));
+                        
 
                     </script>
                 </section>
