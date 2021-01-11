@@ -12,22 +12,17 @@
             <main>
                 <section>
                     <script type="text/javascript">
-                     for(var i = 0; i < 10; i += 3) {
-                         if (i %3 ==0 && i !=0) continue;
-                         if (i == 8) break;
-                         document.write(i + " Hello!<br />");
-                     }
+                    var person;
+                    //alert("Hello, " + person);
 
-                     var x = 0;
-                     while (x < 10) {
-                        document.write(x + "<br />");
-                        x += 2;
-                     }
+                    if (confirm("Are you sure?")) {
+                        person = prompt("Hi, whats you name?"); 
+                        alert("Hello, " + person); 
+                    } 
+                    else
+                    alert("Person not sure");
+                    
 
-                     var y = 1000;
-                     do {
-                        document.write("Cicle working!");
-                     } while(y < 100);
                     </script>
                 </section>
             </main>
