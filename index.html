@@ -13,20 +13,16 @@
                 <section>
                     <script type="text/javascript">
 
-                    var summ; 
+                    var global = "12";
+                    var i = "10";
 
-                    function print (text) {
-                        document.write(text);
-                    }
-                       
-                    function count (x, y) {
-                        summ = x + y;
+                    function test () {
+                        global++;
+                        var i = 5;
                     }
 
-                    print("Hello");
-                    print("<br />");
-                    count(5, 7);
-                    print(summ);
+                    test();
+                    document.write("global - " + global + ", variable i - " + i);
                     
 
                     </script>
