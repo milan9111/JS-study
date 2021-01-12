@@ -4,28 +4,29 @@
         <meta charset="UTF-8">
         <title>JS study</title>
         <script type="text/javascript" href="custom.js"></script>
+        <script type="text/javascript">
+            function buttonclick (button) {
+                alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + ".");
+            }
+
+                var counter = 0;
+            function OnMouseCounter (element) {
+                counter++;
+                element.innerHTML = "На этот текст было наведено " + counter + " раз";
+            }
+
+        </script>
     </head>
-    <body>
+    <body onload="alert('Страница загружена')">
         <header>
 
         </header>
             <main>
                 <section>
-                    <script type="text/javascript">
-
-                    var global = "12";
-                    var i = "10";
-
-                    function test () {
-                        global++;
-                        var i = 5;
-                    }
-
-                    test();
-                    document.write("global - " + global + ", variable i - " + i);
+                    <input type="button" name="b" value="Click me" onclick="buttonclick (this)">
                     
-
-                    </script>
+                    
+                    <span onmouseover="OnMouseCounter (this)">На этот текст было наведено 0 раз</span>
                 </section>
             </main>
         <footer>
