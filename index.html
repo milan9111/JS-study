@@ -12,9 +12,10 @@
             var RePassword = form.RePassword.value;
             var state = form.state.value;
             var fail = false;
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
             if(name == "" || name == " ")
             fail = "Вы неверно ввели свое имя";
-            else if(email == "")
+            else if(reg.test(email) == false)
             fail = "Вы неверно ввели email";
             else if(password == "")
             fail = "Вы неверно ввели пароль";
