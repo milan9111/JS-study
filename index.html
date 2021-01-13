@@ -5,28 +5,48 @@
         <title>JS study</title>
         <script type="text/javascript" href="custom.js"></script>
         <script type="text/javascript">
-            function buttonclick (button) {
-                alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + ".");
-            }
-
-                var counter = 0;
-            function OnMouseCounter (element) {
-                counter++;
-                element.innerHTML = "На этот текст было наведено " + counter + " раз";
-            }
-
+           function valid (form) {
+            var name = form.name.value;
+            var password = form.password.value;
+            var RePassword = form.RePassword.value;
+            var state = form.state.value;
+            var fail = false;
+            if(name == "" || name == " ")
+            fail = "Вы неверно ввели свое имя";
+            else if(password == "")
+            fail = "Вы неверно ввели пароль";
+            else if(RePassword != password)
+            fail = "Пароли не совпадают";
+            else if(state == "")
+            fail = "Укажите пол";
+            if(fail) {
+                alert(fail);
+           }
+           else 
+                window.location = "https://google.com.ua";
+        }
         </script>
     </head>
-    <body onload="alert('Страница загружена')">
+    <body>
         <header>
 
         </header>
             <main>
                 <section>
-                    <input type="button" name="b" value="Click me" onclick="buttonclick (this)">
-                    
-                    
-                    <span onmouseover="OnMouseCounter (this)">На этот текст было наведено 0 раз</span>
+                    <form action="" method="post" name="test" id="form">
+                        <label for="name">Имя:</label>
+                        <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+                        <label for="password">Пароль:</label>
+                        <input type="password" name="password" placeholder="пароль" id="password"><br><br>
+                        <label for="RePassword">Проверка пароля:</label>
+                        <input type="password" name="RePassword" placeholder="Введите пароль" id="RePassword"><br><br>
+                        <span>Пол:</span>
+                        <input type="radio" name="state" id="state1" value="Мужской"><label for="state1">Мужской</label>
+                        <input type="radio" name="state" id="state2" value="Женский"><label for="state2">Женский</label><br><br>
+                        <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово"> 
+
+
+                    </form>
                 </section>
             </main>
         <footer>
