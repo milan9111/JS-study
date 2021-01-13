@@ -7,12 +7,15 @@
         <script type="text/javascript">
            function valid (form) {
             var name = form.name.value;
+            var email = form.email.value;
             var password = form.password.value;
             var RePassword = form.RePassword.value;
             var state = form.state.value;
             var fail = false;
             if(name == "" || name == " ")
             fail = "Вы неверно ввели свое имя";
+            else if(email == "")
+            fail = "Вы неверно ввели email";
             else if(password == "")
             fail = "Вы неверно ввели пароль";
             else if(RePassword != password)
@@ -36,6 +39,8 @@
                     <form action="" method="post" name="test" id="form">
                         <label for="name">Имя:</label>
                         <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" placeholder="email" id="email"><br><br>
                         <label for="password">Пароль:</label>
                         <input type="password" name="password" placeholder="пароль" id="password"><br><br>
                         <label for="RePassword">Проверка пароля:</label>
