@@ -13,13 +13,15 @@
             <main>
                 <section >
                     <script type="text/javascript">
-                        var text = "Число П - " + Math.PI;
-                        text += "\nЧисло Е - " + Math.E;
-                        text += "\nМодуль -7 равен - " + Math.abs(-7);
-                        text += "\nСинус 0.3 - " + Math.sin(0.3);
-                        text += "\nСлучайное число от 0 до 10 - " + Math.floor(Math.random() * 101);
-
-
+                       
+                        var date = new Date();
+                        date.setMonth(date.getMonth()+1);
+                        text = "Год сейчас - " + date.getFullYear();
+                        text += "\nМесяц сейчас - " + date.getMonth();
+                        text += "\nДень сейчас - " + date.getDate();
+                        text += "\nЧасов сейчас - " + date.getHours();
+                        text += "\nМинут сейчас - " + date.getMinutes();
+                        text += "\nСекунд сейчас - " + date.getSeconds();
                         alert(text);
                     </script>
                 </section>
