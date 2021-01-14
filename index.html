@@ -4,31 +4,24 @@
         <meta charset="UTF-8">
         <title>JS study</title>
         <script type="text/javascript" href="custom.js"></script>
-        <script type="text/javascript">
-         //var id = setInterval("myFunct_1()", 1000);
-         var counter = -1;
-
-        /*function myFunct_1 () {
-                counter++;
-                alert("Секунд прошло - " + counter);
-                if (counter == 3) clearInterval(id);                        
-        }*/
         
-        function timer () {
-            counter++;
-            document.getElementById("count").innerHTML = counter;
-            setTimeout("timer()", 1000);
-        }
-
-        </script>
     </head>
-    <body onload="timer()">
+    <body>
         <header>
 
         </header>
             <main>
                 <section >
-                    Секунд прошло <span id="count"></span>
+                    <script type="text/javascript">
+                        var text = "Число П - " + Math.PI;
+                        text += "\nЧисло Е - " + Math.E;
+                        text += "\nМодуль -7 равен - " + Math.abs(-7);
+                        text += "\nСинус 0.3 - " + Math.sin(0.3);
+                        text += "\nСлучайное число от 0 до 10 - " + Math.floor(Math.random() * 101);
+
+
+                        alert(text);
+                    </script>
                 </section>
             </main>
         <footer>
