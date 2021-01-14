@@ -13,26 +13,14 @@
             <main>
                 <section >
                     <script type="text/javascript">
-                       
-                        var date = new Date();
-                        date.setMonth(date.getMonth()+1);
-                        text = "Год сейчас - " + date.getFullYear();
-                        text += "\nМесяц сейчас - " + date.getMonth();
-                        text += "\nДень сейчас - " + date.getDate();
-                        text += "\nЧасов сейчас - " + date.getHours();
-                        text += "\nМинут сейчас - " + date.getMinutes();
-                        text += "\nСекунд сейчас - " + date.getSeconds();
-                        //alert(text);
+                       var arr = new Array (2, 3, 56, 12, 23, 590, 123, 2);
+                       text = "Длинна массива - " + arr.length;
+                       text += "\nМассив состоит из - " + arr.join(", ");
+                       text += "\nСортировка массива - " + (arr.sort()).join(", ");
 
-                        var date = new Date(2000, 0, 12, 14, 23, 43);
-                        date.setMonth(date.getMonth()+1);
-                        text = "Год сейчас - " + date.getFullYear();
-                        text += "\nМесяц сейчас - " + date.getMonth();
-                        text += "\nДень сейчас - " + date.getDate();
-                        text += "\nЧасов сейчас - " + date.getHours();
-                        text += "\nМинут сейчас - " + date.getMinutes();
-                        text += "\nСекунд сейчас - " + date.getSeconds();
-                        alert(text);
+
+                       alert(text);
+                       
                     </script>
                 </section>
             </main>
